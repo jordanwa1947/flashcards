@@ -16,4 +16,14 @@ describe('Round', function() {
     expect(game).to.be.an.instanceof(Game);
   });
 
+  it('should be a function', function() {
+    const game = new Game();
+    const cards = game.createCards();
+
+    assert.equal(cards.length, 30);
+    cards.forEach((card) => {
+      expect(card).to.be.an.instanceof(Card);
+    });
+  });
+
 });
